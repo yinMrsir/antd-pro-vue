@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { basicRoutes } from './routes'
-import { setPermissionRouter } from './permission'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -10,7 +9,6 @@ const router = createRouter({
 // 配置路由
 export function setupRouter(app) {
   app.use(router)
-  setPermissionRouter(router)
 }
 
 export default router
