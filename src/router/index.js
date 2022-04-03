@@ -25,5 +25,4 @@ export const LoginRoute = {
   }
 }
 
-// 基础路由 不用权限
-export const basicRoutes = [LoginRoute, RootRoute]
+export default [LoginRoute, RootRoute]

@@ -133,7 +133,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
-@import "@/assets/less/var.less";
+@import "../../assets/less/var.less";
 
 .search-section {
   width: 100%;

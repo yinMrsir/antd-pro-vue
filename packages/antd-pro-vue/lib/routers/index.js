@@ -1,14 +1,19 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import { basicRoutes } from './routes'
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes: basicRoutes,
-})
+import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 
 // 配置路由
-export function setupRouter(app) {
-  app.use(router)
-}
+export function setupRouter(app, { routes, history, beforeEach, afterEach }) {
+  const router = createRouter({
+    history: history === 'hash' ? createWebHashHistory() : createWebHistory(),
+    routes,
+  });
 
-export default router
+  app.use(router);
+
+  typeof beforeEach ==='function' && router.beforeEach((to, from, next) => {
+    beforeEach(router, { to, from, next })
+  });
+
+  typeof afterEach ==='function' &&  router.afterEach((to, from) => {
+    afterEach(router, { to, from })
+  })
+}
