@@ -10,6 +10,7 @@
         </div>
         <template #overlay>
           <a-menu>
+            <a-menu-item v-for="(item, index) in headerConfig.menuList" :key="index" @click="item.onClick">{{ item.text }}</a-menu-item>
             <a-menu-item>
               <a @click="headerConfig.logout">退出登录</a>
             </a-menu-item>
@@ -32,7 +33,9 @@ export default defineComponent({
     },
     headerConfig: {
       type: Object,
-      default: {}
+      default: {
+        logout: () => {}
+      }
     }
   },
   setup(props, { emit }) {
