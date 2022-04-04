@@ -2,7 +2,6 @@
  * 本地存储变量
  */
 export const userInfo = 'userInfo'
-export const collapsed = 'collapsed'
 
 /**
  * 获取localStorage存储数据

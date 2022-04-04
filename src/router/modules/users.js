@@ -2,7 +2,7 @@ export default {
   orderNo: 2,
   path: '',
   name: 'users',
-  component: () => import('@/layouts/basicLayout/index.vue'),
+  component: () => import('@/router/layout/index.vue'),
   meta: {
     icon: 'TeamOutlined',
     title: '用户管理',

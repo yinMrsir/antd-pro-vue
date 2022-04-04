@@ -25,7 +25,6 @@ Object.keys(modules).forEach((key) => {
   modules[key]['namespaced'] = true
 })
 
-
 /**
  * 创建Store
  */
