@@ -36,10 +36,8 @@
 import { defineComponent, reactive, watch, ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { message } from "ant-design-vue";
-import { useStore } from "vuex";
 import { FormPanel } from "antd-pro-vue";
 import { GVerify } from "@/plugins/index";
-import { userLogin } from "./service";
 
 const renderForm = {
   username: {
@@ -74,7 +72,6 @@ export default defineComponent({
   },
   setup() {
     const router = useRouter();
-    const store = useStore();
     const formData = reactive({
       code: "",
     });
@@ -86,9 +83,7 @@ export default defineComponent({
         message.error("验证码错误");
         return;
       }
-      const params = await formPanel.value.onSubmit();
-      const { data } = await userLogin(params);
-      await store.dispatch("login", data);
+      await formPanel.value.onSubmit();
       message.success("登录成功");
       router.push("/");
     };

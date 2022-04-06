@@ -4,19 +4,19 @@
 
 <script setup>
 import { BasicLayout } from "antd-pro-vue";
-import { useStore } from "vuex";
+import { message } from 'ant-design-vue'
+import { useRouter } from "vue-router";
 
-const store = useStore();
-import { userInfo, getLocalStorage } from '@/utils/storage'
+const router = useRouter();
 
 const headerConfig = {
-  username: getLocalStorage(userInfo).userInfo.username,
+  username: 'admin',
   menuList: [],
   logout: () => {
-    store.dispatch('logout', {
-      msg: '退出成功，即将跳转登录页...',
-      time: 1.5
-    })
+    message.success("退出成功，即将跳转登录页...");
+    setTimeout(() => {
+      router.push("/login");
+    }, 1500)
   },
 };
 </script>

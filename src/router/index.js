@@ -6,8 +6,6 @@ Object.keys(modules).forEach((key) => {
   routeModuleList.push(...modList);
 });
 
-export const asyncRoutes = [...routeModuleList]
-
 export const RootRoute = {
   path: '/',
   name: 'Root',
@@ -25,4 +23,4 @@ export const LoginRoute = {
   }
 }
 
-export default [LoginRoute, RootRoute]
+export default [LoginRoute, RootRoute, ...routeModuleList]

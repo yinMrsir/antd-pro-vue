@@ -2,6 +2,8 @@
 
 基于ant-design-vue3封装的组件库，具有更多拿到即用的组件，快速搭建页面。
 
+demo：https://gitee.com/yinMrsir/fool-admin-template
+
 ## 安装下载
 
 - 下载地址：https://github.com/yinMrsir/antd-pro-vue.git
