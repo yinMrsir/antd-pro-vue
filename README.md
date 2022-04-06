@@ -1,7 +1,29 @@
-# Vue 3 + Vite
+# antd-pro-vue
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+基于ant-design-vue3封装的组件库，具有更多拿到即用的组件，快速搭建页面。
 
-## Recommended IDE Setup
+## 安装下载
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- 下载地址：https://github.com/yinMrsir/antd-pro-vue.git
+
+## 快速使用
+
+```
+# 安装依赖(建议使用yarn)
+
+npm install
+or
+yarn install
+
+# 启动
+
+npm run dev
+or
+yarn dev
+```
+
+## 交流 & 提问
+
+QQ交流群: 411121858
+
+提问：https://github.com/yinMrsir/antd-pro-vue/issues
