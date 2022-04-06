@@ -16,4 +16,6 @@ export function setupRouter(app, { routes, history, beforeEach, afterEach }) {
   typeof afterEach ==='function' &&  router.afterEach((to, from) => {
     afterEach(router, { to, from })
   })
+
+  return router
 }

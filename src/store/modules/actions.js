@@ -1,3 +1,7 @@
+import { getRouter } from "antd-pro-vue"
+import { message } from "ant-design-vue";
+import { sleep } from '@/utils'
+
 export default {
   /**
    * 通过接口获取静态数据
@@ -34,12 +38,18 @@ export default {
    * @param time 跳转页面间隔时间
    * @return {Promise<unknown>}
    */
-  logout({ commit }) {
+   logout({ commit }, { msg, path = '/login', time }) {
     return new Promise(async resolve => {
       commit('SET_STATIC_DATA', {})
       commit('SET_USER_INFO', {})
       localStorage.clear()
-      resolve();
+      resolve()
+      /**
+       * 界面操作
+       */
+      msg && message.success(msg)
+      time && (await sleep(time))
+      path && getRouter().push(path)
     })
-  }
+  },
 }

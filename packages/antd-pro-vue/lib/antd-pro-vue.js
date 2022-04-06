@@ -7,19 +7,27 @@ import { setupRouter } from './routers'
 import { setupAntd } from './antd'
 import { setAntIcons } from './ant-icons'
 
-const init = (app, { routesConfig }) => {
+let router = null;
+const install = (app, { routesConfig }) => {
   // 使用antd
   setupAntd(app)
   // 使用antd-icon
   setAntIcons(app)
   // 路由
-  setupRouter(app, routesConfig)
+  router = setupRouter(app, routesConfig)
+  return app;
 }
+
+const getRouter = () => router;
 
 export {
   FormPanel,
   SearchPanel,
   TablePanel,
   BasicLayout,
-  init
+  getRouter
+}
+
+export default {
+  install
 }

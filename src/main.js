@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { init } from 'antd-pro-vue'
+import antdProVue from 'antd-pro-vue'
 import App from './App.vue'
 import { setupStore } from './store'
 import routes, { asyncRoutes } from './router'
@@ -12,7 +12,7 @@ let isNeedGetRoutes = true
 // 配置vuex store
 setupStore(app)
 
-init(app, {
+app.use(antdProVue, {
   routesConfig: {
     routes,
     beforeEach: async (router, { to, from, next }) => {
@@ -26,7 +26,7 @@ init(app, {
           if (isNeedGetRoutes) {
             /**
              * 获取动态路由列表
-             * 此处只获取，路由权限过滤
+             * 路由权限过滤
              */
             asyncRoutes.forEach(route => {
               router.addRoute(route)
