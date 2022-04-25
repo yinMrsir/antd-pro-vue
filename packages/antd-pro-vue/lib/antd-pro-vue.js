@@ -6,6 +6,7 @@ import BasicLayout from './components/layouts/basicLayout/index.vue'
 import { setupRouter } from './routers'
 import { setupAntd } from './antd'
 import { setAntIcons } from './ant-icons'
+import './assets/less/index.less';
 
 let router = null;
 const install = (app, { routesConfig }) => {
