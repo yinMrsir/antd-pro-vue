@@ -22,10 +22,8 @@
               <!-- 遍历二级菜单显示 -->
               <template v-for="(childrenItem, childrenIndex) in item.children">
                 <template v-if="!childrenItem.hidden">
-                  <a-menu-item :key="index + '-' + childrenIndex">
-                    <router-link :to="{ name: childrenItem.name }">
-                      {{ childrenItem.meta.title }}
-                    </router-link>
+                  <a-menu-item :key="index + '-' + childrenIndex" @click="toLink({ name: childrenItem.name }, childrenItem)">
+                    {{ childrenItem.meta.title }}
                   </a-menu-item>
                 </template>
               </template>
@@ -33,13 +31,11 @@
           </template>
           <!-- 没有子菜单 -->
           <template v-else-if="item.meta">
-            <a-menu-item :key="index + ''">
-              <router-link :to="{ name: item.name }">
-                <component :is="$antIcons[item.meta.icon]" />
+            <a-menu-item :key="index + ''" @click="toLink({ name: item.name }, item)">
+              <component :is="$antIcons[item.meta.icon]" />
                 <span class="menu-item-a">
                   {{ item.meta.title }}
                 </span>
-              </router-link>
             </a-menu-item>
           </template>
         </template>
@@ -49,7 +45,7 @@
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter, onBeforeRouteUpdate } from "vue-router";
 
 export default {
@@ -121,6 +117,10 @@ export default {
       setSelectStatus()
     });
 
+    watch(() => router.currentRoute.value, (value) => {
+      setSelectStatus();
+    })
+
     /**
      * router排序
      * @param menuModules
@@ -132,11 +132,17 @@ export default {
       });
     }
 
+    const toLink = (obj, item) => {
+      emit('addPanes', item);
+      router.push(obj);
+    }
+
     return {
       selectedKeys,
       openKeys,
       onChangeMenu,
-      sortMenu
+      sortMenu,
+      toLink
     }
   }
 }

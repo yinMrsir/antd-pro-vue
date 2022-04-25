@@ -25,8 +25,9 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .breadcrumb-layout {
-  padding: 16px 0 16px 16px;
+  padding: 14px 0 0 0;
   background: #fff;
+  height: 30px;
 
   h1 {
     padding-top: 5px;

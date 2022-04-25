@@ -1,7 +1,7 @@
 export default {
   orderNo: 1,
   path: '',
-  name: 'home',
+  name: 'index',
   component: () => import('@/router/layout/index.vue'),
   hideChildrenInMenu: true,
   meta: {

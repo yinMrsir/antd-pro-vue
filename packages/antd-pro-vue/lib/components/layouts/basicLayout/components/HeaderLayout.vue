@@ -1,7 +1,12 @@
 <template>
   <a-layout-header class="header-layout">
-    <menu-unfold-outlined v-if="collapsed" class="trigger" @click="emit('setCollapsed', false)"/>
-    <menu-fold-outlined v-else class="trigger" @click="emit('setCollapsed', true)"/>
+    <div style="display: flex;">
+      <div>
+        <menu-unfold-outlined v-if="collapsed" class="trigger" @click="emit('setCollapsed', false)"/>
+        <menu-fold-outlined v-else class="trigger" @click="emit('setCollapsed', true)"/>
+      </div>
+      <slot></slot>
+    </div>
     <div class="header-layout-right">
       <a-dropdown class="user-info">
         <div>
