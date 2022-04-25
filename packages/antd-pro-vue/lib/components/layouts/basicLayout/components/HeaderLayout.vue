@@ -59,6 +59,8 @@ export default defineComponent({
   line-height: 48px;
   background: #fff;
   border-bottom: #dedede solid 1px;
+  display: flex;
+  justify-content: space-between;
 
   .trigger {
     padding: 0 24px;
@@ -74,7 +76,6 @@ export default defineComponent({
   }
 
   .header-layout-right {
-    float: right;
     padding-right: 20px;
 
     .user-info {
