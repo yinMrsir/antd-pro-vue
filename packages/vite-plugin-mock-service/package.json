@@ -1,0 +1,29 @@
+{
+  "name": "vite-plugin-mock-service",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "yinchunyu <542968439@qq.com>",
+  "homepage": "https://github.com/yinMrsir/antd-pro-vue#readme",
+  "license": "ISC",
+  "main": "lib/vite-plugin-mock-service.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yinMrsir/antd-pro-vue.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/yinMrsir/antd-pro-vue/issues"
+  },
+  "dependencies": {
+    "webpack-mock-service-plugin": "^1.0.9"
+  }
+}
