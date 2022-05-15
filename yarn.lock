@@ -5205,10 +5205,10 @@ webidl-conversions@^6.1.0:
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-6.1.0.tgz#9111b4d7ea80acd40f5270d666621afa78b69514"
   integrity sha512-qBIvFLGiBpLjfwmYAaHPXsn+ho5xZnGvyGvsarywGNc8VyQJUMHJ8OBKGGrPER0okBeMDaan4mNBlgBROxuI8w==
 
-webpack-mock-service-plugin@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/webpack-mock-service-plugin/-/webpack-mock-service-plugin-1.0.9.tgz#81fe099c2d86c43ac2f3f3cede9a8bb71588b709"
-  integrity sha512-VLPjtKeIEntI39pzykVNeNIkFmDcwd4BibrgkOuyewEuyPAF0WEhxptJr9lTaLznu0bhifThSQ3mtJSEinG34g==
+webpack-mock-service-plugin@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/webpack-mock-service-plugin/-/webpack-mock-service-plugin-1.1.1.tgz#e0a90e49e6b874d038426c40b70a307ed139b119"
+  integrity sha512-Edfz/PGAcpxoNCRUez3zc4wF7c/ENTshesLReFg0KRPHgtQv98L9bh3giklHXi/ySALbad57Gsok0UOu3zCpnQ==
   dependencies:
     express "^4.17.1"
     mockjs "^1.1.0"
