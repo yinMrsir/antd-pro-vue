@@ -24,6 +24,6 @@
     "url": "https://github.com/yinMrsir/antd-pro-vue/issues"
   },
   "dependencies": {
-    "webpack-mock-service-plugin": "^1.1.1"
+    "webpack-mock-service-plugin": "^1.1.2"
   }
 }
