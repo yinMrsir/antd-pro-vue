@@ -8,7 +8,7 @@ function vitePluginMockService(options) {
         name: 'testPlugin',
         apply: 'serve',
         buildStart() {
-          const mock = new WebpackMockServicePlugin(options);
+          const mock = WebpackMockServicePlugin.getInstance(options);
           mock.apply();
         }
       }
